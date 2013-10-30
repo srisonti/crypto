@@ -19,6 +19,11 @@
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
+            .logo { 	/* just playing around with this, feel free to change or remove */
+            	background:url("cryptoicon.png");
+            	width:325px;
+            	height:250px;
+            }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -34,6 +39,12 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
+        
+<!-- LOGO: just playing around with this, feel free to remove or change as needed -->        
+        <div class="logo">&nbsp;</div>
+<!-- /LOGO -->
+
+      
           <div class="list-group">
             <a href="#" class="list-group-item active">
               Cras justo odio
@@ -47,9 +58,9 @@
         <div class="col-lg-8">
           <h1>Email Encryption with Thunderbird</h1>
           <h3><i>A guide to setting up PGP-encrypted email on Windows and OS X</i></h3>
-          <p><strong>Purpose:</strong> This guide attempts to explain how to implement PGP email encryption to enhance security and privacy. This guide is a recipe, not an encyclopedia. Its primary goal is to demonstrate how it is done, not to explain why (although there is some explanation at the end). For further information, we recommend consulting the Ars Technica article on setting up email encryption, which we have included on this CD along with other information about encryption. The Ars guide uses the same method described below, but we have no affiliation with Ars Technica. The article can be found <a href="http://arstechnica.com/security/2013/06/encrypted-e-mail-how-much-annoyance-will-you-tolerate-to-keep-the-nsa-away/">here at Ars Technica.</a></p>
+          <p><strong>Purpose:</strong> This guide attempts to explain how to implement PGP email encryption to enhance security and privacy. This guide is a recipe, not an encyclopedia. Its primary goal is to demonstrate how it is done, not to explain why (although there is some explanation at the end). For further information, we recommend consulting the Ars Technica article on setting up email encryption. The Ars guide uses the same method described below, but we have no affiliation with Ars Technica. The article can be found <a href="http://arstechnica.com/security/2013/06/encrypted-e-mail-how-much-annoyance-will-you-tolerate-to-keep-the-nsa-away/">here at Ars Technica.</a></p>
 
-          <p><strong>Software:</strong> The following software is used in this guide. For best security, always download the files from the original source and verify the checksum. For your convenience, we have included the latest version of the software as of the time this guide was written [2013.09.13].</p>
+          <p><strong>Software:</strong> The following software is used in this guide. For best security, always download the files from the original source and verify the checksum.</p>
 
           <div class="list-group">
             <a href="https://www.mozilla.org/en-US/thunderbird/" class="list-group-item">
@@ -66,7 +77,7 @@
             </a>
             <a href="http://www.truecrypt.org/" class="list-group-item">
               <h3 class="list-group-item-heading">TrueCrypt</h3>
-              <p class="list-group-item-text">TrueCrypt is not necessary for email encryption, but it allows you to create encrypted “containers” that work like password-protected folders. You can fill these containers with the files you want to encrypt, and send them as email attachments as one way to encrypt attachments. You can also use them to keep your personal data more secure on your own computer.</p>
+              <p class="list-group-item-text">TrueCrypt is not necessary for email encryption, but it allows you to create encrypted “containers” that work like password-protected folders. You can fill these containers with the files you want to encrypt, and send them as email attachments as one way to encrypt attachments. You can also use them to keep your keys and personal data more secure on your own computer.</p>
             </a>
           </div>
 
@@ -79,7 +90,7 @@
 
           <p>Finally, we test it to make sure it works. I'll also outline how to use TrueCrypt to securely backup your private key and briefly mention a few other relevant topics.</p>
 
-          <p>The Appendix has some general information on keys, keysigning, and keyservers, as well as some suggestions for further reading.</p>
+          <p>The Appendix has some general information on keys, keysigning, keyservers, and how TrueCrypt can come into play, as well as some suggestions for further reading.</p>
 
 
           <h2>Part I: Install Thunderbird</h2>
@@ -199,7 +210,7 @@
           <p>Basics of Keys: In order to send someone an encrypted message, you will need their public key. For example, to send a message that only John can decrypt, you must encrypt it with John's public key. John then uses his private key to decrypt the message. Never give out your private key for any reason. Whoever has your private key can decrypt any encrypted message sent to you using your paired public key. For further information on how key pairs work, now is a really good time to read the Appendix or see the suggested links on that.</p>
 
           <ol>
-            <li>Obtain a public key from someone you want to email. This CD contains the public key for the email address testyourcrypto.rt4@gmail.com. If you don't have anyone's public key, try that one and be sure to send me your public key so I can respond. I'll try to answer you ASAP by sending you an encrypted email back. Please do not send any sensitive information. This is for testing purposes only, and you cannot be sure that the public key on this disc was not tampered with.</li>
+            <li>Obtain a public key from someone you want to email. This CD contains the public key for the email address <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>. If you don't have anyone's public key, try that one and be sure to send me your public key so I can respond. I'll try to answer you ASAP by sending you an encrypted email back. Please do not send any sensitive information. This is for testing purposes only, and you cannot be sure that the public key on this disc was not tampered with.</li>
             <li>
               Import the recipient's public key. 
               <ul>
@@ -215,7 +226,7 @@
               </ul>
             </li>
             <li>
-              That's it, you've sent an encrypted message! If you sent it to testyourcrypto.rt4@gmail.com, I will send you a reply as soon as I can letting you know if it worked. If you send me your public key as a file or in the text of your email, I will send you an encrypted response.
+              That's it, you've sent an encrypted message! If you sent it to plexiglass@riseup.net, I will send you a reply as soon as I can letting you know if it worked. If you send me your public key as a file or in the text of your email, I will send you an encrypted response.
               <ul>
                 <li><strong>Receiving Encrypted Messages:</strong> When you receive an encrypted message, just click it. A box will pop up asking for your passphrase. Enter it and the message should now be decrypted.</li>
               </ul>
@@ -229,49 +240,31 @@
           <p>As you may have guessed, the above example is a lot like how our key pairs function. The key you copied and gave out to everyone is like your Public Key. Someone can use your Public Key to encrypt a message so that it can only be decrypted with your Private Key. So as long as you don't give your Private Key to anyone else, only you can decrypt the message.</p>
 
           <h3><strong>What is keysigning, and why does it matter? What is a keyserver?</strong></h3>
-          <p>Imagine you have a passport. When you travel internationally, customs will inspect and stamp your passport. The stamp shows a date, as well as the name of the agency doing the stamping and other information. So, if you could be sure the stamps were real, you could prove your passport was inspected by others and they found it to be real and to belong to you.</p>
-          <p>The passport in the example is like your public key, except you don't have to travel internationally to get it stamped, and you have ways to ensure the stamps are real. Keysigning is the act of verifying that a public key belongs to the person it claims to and then “stamping” it with the signature of the person who verified it. Signing someone's key essentially attests: “I have verified that this key belongs to its purported owner, and it could not have possibly been modified by a third party.” Now, a third party who trusts the person who did the signing can trust the public key that was signed.</p>
+          <p>Suppose you couldn't make it to the party in the previous example. However, some of your friends did. Remember that if you want to send a message to a friend, you need to have a copy of their public key. So if you meet up with a friend that went to the party and got copies of everyone else's public key, you can copy their keys from your friend. That way you can send a message to anyone who was at the party, even though you weren't there.</p>
+          <p>Since you didn't get the key directly from the person it (supposedly) belongs to, you should not trust it completely. How do you know it actually belongs to the person you want to contact? One way to help you decide how much to trust a key is by looking at the signatures. Signatures work sort of like a keychain tag that says “This key belongs to XXXX, signed by YYYY”. When you sign someone else's key, you put a little tag on it that says you verified it belongs to them. That way if someone you know gets a copy of that key from elsewhere, they can see that you trust it, so they can put some trust in it to.</p>
+          <p>More technically, <em><strong>keysigning</strong></em> is the act of verifying that a public key belongs to the person it claims to and then “stamping” it with the signature of the person who verified it. Signing someone's key essentially attests: “I have verified that this key belongs to its purported owner, and it could not have possibly been modified in transit.” Now, a third party who trusts the person who did the signing can trust that the public key that was signed belongs to the person it claims to, without actually verifying their identity in person.</p>
           <p>Suppose Abe goes to a keysigning party and gives Brian his public key. Brian and Abe have known each other for a while, and Abe gave Brian the key on a flash drive, in person. Since Brian is confident that the key came from Abe and it couldn't have been tampered with in transit, Brian signs Abe's key. Suppose later on, Brian's sister Carmen wants to send Abe an encrypted love message. Carmen couldn't make it to the party, so she just gets a copy of Abe's public key from her brother. Since she wants to be sure that only Abe can read the message, she checks the signatures on Abe's public key. She sees that her brother Brian signed it, and so did her best friend Danelle, as well as a few other friends she can trust. Since she trusts the signatures, she can trust that the message really will be encrypted so only Abe can decrypt it.</p>
-          <p>Now how do you make sure people can see all of the signatures on your key? If you gave them a copy of your “passport” before it had all the “stamps” in it, what good does it do? You have two options. The first is to manually give out the latest copies of the public key with all the signatures to everyone you already gave your key to. But with the magic of the Internet, you can use a keyserver to keep the latest copy online for your contacts to download. That everyone can get the latest version easily, and people who contact you for the first time can have an idea of how much to trust the key.</p>
-          <p>For more information on keysigning and trusted networks, go <a href="http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html#overview">here</a>.</p>
-
+          <p>Now how do you make sure people can see all of the signatures on your key? Since you keep adding signatures to your public key, all of the people you gave it to in the past will have an increasingly outdated copy. Their copy of your keychain will have the correct key, but it will be missing tags. If they already verified you were the owner of the key, it may not make a difference to them. But if other people get a copy of your key from them, you want those people to see as many signatures as possible so they can trust it. You have two options for distributing updated copies of your public key with its signatures. The first is to manually give out the latest copies of the public key with all the signatures to everyone you already gave your key to. This obvioiusly time-consuming and ineffecient. But with the magic of the Internet, you can use a <em><strong>keyserver</strong></em> to keep the latest copy online for your contacts to download. That way everyone can get the latest version easily, and people who contact you for the first time can have an immediate idea of how much to trust the key. All you have to do is upload your key (with its signatures) to the keyserver after it has been signed by others. Then, anyone can download a copy of your public key from the keyserver. Since they are getting it online, they will really want to see the signatures, since that is the only way they can really know to trust it. Keeping your public key up to date on the keyserver makes it easier for people to send you encrypted messages.</p>
+          <p>The following link contains a lot more information on keysigning and trust networks: <a href="http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html#overview">http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html#overview</a></p>
+          
           <h3><strong>How do I use TrueCrypt? Why?</strong></h3>
-
-          <p>Sorry I didn't have time to write this section. TrueCrypt has a <a href="http://www.truecrypt.org/docs/tutorial">good guide on their website</a>. Basically just follow that guide to make a TrueCrypt container and use that to store a backup of your private key on a flash drive in a safe place. That way your backup copy is safely encrypted in case it gets in the wrong hands.</p>
-
+          <p>Please see <a href="#">our TrueCrypt guide</a> for information on how to setup and use TrueCrypt. For more information, TrueCrypt has an informative guide on their website: <a href="http://www.truecrypt.org/docs/tutorial">http://www.truecrypt.org/docs/tutorial</a>.</p>
+          <p>Why use TrueCrypt? You private key is very important to keep private. Keeping it private has two parts, the first of which is keeping it. Since your private key is the only way to decrypt messages sent using your public key, your emails will be gone forever if you lose your private key. After following this guide, you will have your private key stored on your computer by the keymanager program (GPA or GPGKeychainAccess). But if your computer hard drive fails then you have lost your private key. There will be no way to recreate it, and anything you could previously use it to decrypt will now be forever lost to the winds of randomness. Long story short, you absolutely need to create a backup. You should use an external device like a USB thumb drive that you can store in a safe and secure location.</p>
+          <p>To make sure you keep it private, you should use TrueCrypt to encrypt the backup copy. If you have a spare flash drive that you can use for just this and other private files you want to keep (the keys will only take a few KB of space), I recommend selecting the “Create a volume within a partition/drive” option and using the whole USB drive. Then you can mount the drive using TrueCrypt and make your backup copy there. I also recommend the “Hidden TrueCrypt volume” option if you don't mind the hassle. You may want to keep more than one backup copy in a separate location. You could give one to your friend or your mother or anyone who won't lose it, they won't be able to read anything on it without your password.</p>
+          
           <h3>Suggested links for further information</h3>
           <ul>
             <li><a href="http://r4wiki.com/">Restore the Fourth Wiki</a></li>
             <li><a href="http://arstechnica.com/security/2013/06/encrypted-e-mail-how-much-annoyance-will-you-tolerate-to-">Ars Technica Email Encryption Guide</a></li>
             <li><a href="http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html">Keysigning Party How-To (Intro to Keysigning, Keyservers, and Webs of Trust)</a></li>
-            <li><a href="http://www.truecrypt.org/docs/tutorial">TrueCrypt Tutorial</a></li>
+            <li><a href="http://www.truecrypt.org/docs/tutorial">TrueCrypt Tutorial (Official)</a></li>
             <li><a href="http://codesorcery.net/old/mutt/mutt-gnupg-howto">Email Encryption using Mutt</a></li>
           </ul>
 
-          <h3>Included documents/software on the CD</h3>
-          <ul>
-            <li>
-              Software
-              <ul>
-                <li>Thunderbird</li>
-                <li>Enigmail</li>
-                <li>gpg4Win</li>
-                <li>GPGSuite</li>
-                <li>TrueCrypt</li>
-              </ul>
-            </li>
-            <li>
-              Documents
-              <ul>
-                <li>PDF documents of the suggested links</li>
-                <li>GNU General Public License</li>
-              </ul>
-            </li>
-          </ul>
 
-          <p><strong>Copyleft Notice:</strong> This document is covered under GNU General Public License. The applications included on this CD are open-source and can be obtained at the creators' websites, listed above. (Please consult application documentation for their specific licenses.)</p>
+          <p><strong>Copyleft Notice:</strong> This document is covered under GNU General Public License. The applications used in this guide are open-source and can be obtained at the creators' websites, listed above. (Please consult application documentation for their specific licenses.)</p>
 
-          <p>If you find problems with this guide, need help, or have improvements or suggestions, please contribute to the wiki [rt4wiki.com] or email me at <a href="mailto:testyourcrypto.rt4@gmail.com">testyourcrypto.rt4@gmail.com</a>.</p>
+          <p>If you find problems with this guide, need help, or have improvements or suggestions, please contribute to the git repo or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
         </div>
       </div>
 
