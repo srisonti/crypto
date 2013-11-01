@@ -24,6 +24,22 @@
             	width:325px;
             	height:250px;
             }
+            .sub-item {
+				font-size: .9em;
+				padding-left:2em;
+            }
+            .subactive {
+            	background-color:#FF925D;
+            	padding-left:2em;
+            }
+            a.sub-item:hover {
+            	background-color:#FDCDAF;
+            }
+            .hideme {
+            	display:none;
+            }
+            
+
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -44,32 +60,53 @@
         <a href="?page=0"><div class="logo">&nbsp;</div></a>
 <!-- /LOGO -->
 
-      
-          <div class="list-group">
-            <a href="?page=0" class="list-group-item active">
-              About CryptoParty ATX
-            </a>
-            <a href="?page=1" class="list-group-item">How-To Guides</a>
-            <a href="?page=2" class="list-group-item">Upcoming Events</a>
-            <a href="?page=3" class="list-group-item">Contribute</a>
-            <!-- <a href="#" class="list-group-item">Vestibulum at eros</a> -->
-          </div>
-        </div>
-        <div class="col-lg-8">
-
 <?php
 
 $pageid = $_GET['page'];
 if (!$pageid || ($pageid < 0) || ($pageid > 3)){ 
 	$pageid=0;
 }
+?>     
+      
+          <div class="list-group">
+            <a href="?page=0" class="list-group-item<?php if($pageid==0)echo ' active' ?>">
+              About CryptoParty ATX
+            </a>
+            <a href="?page=1" class="list-group-item<?php if($pageid >= 1 && $pageid < 2)echo ' active'; else $inactive=true; ?>">Crypto Info and How-To Guides</a>
+                <a href="?page=1.1" class="list-group-item sub-item<?php if($pageid==1.1)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Email Encryption</a>
+                <a href="?page=1.2" class="list-group-item sub-item<?php if($pageid==1.2)echo ' subactive'; if($inactive) echo ' hideme'; ?>">File and Folder Encryption</a>
+                <a href="?page=1.3" class="list-group-item sub-item<?php if($pageid==1.3)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Instant Message Encryption</a>
+                <a href="?page=1.4" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
+            <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active' ?>">Upcoming Events</a>
+            <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active' ?>">Contribute</a>
+            <!-- <a href="#" class="list-group-item">Vestibulum at eros</a> -->
+          </div>
+        </div>
+        <div class="col-lg-8">
+
+
+
+<?php
 
 if ($pageid==0){
 	include "content/ATX.html";
 }
 if ($pageid==1){
-	include "content/HT-EM.html";
+	include "content/how-to.html";
 }
+	if ($pageid==1.1){
+		include "content/HT-EMAIL.html";
+	}
+	if ($pageid==1.2){
+		include "content/HT-FILE.html";
+	}
+	if ($pageid==1.3){
+		include "content/HT-OTR.html";
+	}
+	if ($pageid==1.4){
+		include "content/HT-SMS.html";
+	}
+
 if ($pageid==2){
 	include "content/events.html";
 }
@@ -82,7 +119,7 @@ if ($pageid==3){
 <hr>
           <p><strong>Copyleft Notice:</strong> This document is covered under GNU General Public License. The applications used in this guide are open-source and can be obtained at the creators' websites, listed above. (Please consult application documentation for their specific licenses.)</p>
 
-          <p>If you find problems with this guide, need help, or have improvements or suggestions, please contribute to the git repo or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
+          <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the git repo or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
         </div>
       </div>
 
