@@ -20,9 +20,9 @@
                 padding-bottom: 20px;
             }
             .logo { 	/* just playing around with this, feel free to change or remove */
-            	background:url("cryptoicon.png");
+            	background:url("crypto-icon-wide.png");
             	width:325px;
-            	height:250px;
+            	height:44px;
             }
             .sub-item {
 				font-size: .9em;
@@ -117,7 +117,7 @@ if ($pageid==3){
 ?>
 
 <hr>
-          <p><strong>Copyleft Notice:</strong> This document is covered under GNU General Public License. The applications used in this guide are open-source and can be obtained at the creators' websites, listed above. (Please consult application documentation for their specific licenses.)</p>
+          <p><img width=44 src="images/gplv3-88x31.png" />&nbsp;&nbsp;<strong>Copyleft Notice:</strong> The content on this page is covered under <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3.0</a> unless otherwise noted. The applications referenced in this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
 
           <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the git repo or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
         </div>

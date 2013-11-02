@@ -6,6 +6,32 @@
 		background-color:#CCCCCC;
 		display:inline-block;
 	}
+	#cg-EMAIL {
+		background:url("images/email-unselected.png");
+	}
+	#cg-EMAIL:hover {
+		background:url("images/email-selected.png");
+	}
+	#cg-FILES {
+		background:url("images/files-unselected.png");
+	}
+	#cg-FILES:hover {
+		background:url("images/files-selected.png");
+	}
+	#cg-SMS {
+		background:url("images/SMS-unselected.png");
+	}
+	#cg-SMS:hover {
+		background:url("images/SMS-selected.png");
+	}
+/*	
+	#cg-IM {
+		background:url("images/IM-unselected.png");
+	}
+	#cg-IM:hover {
+		background:url("images/IM-selected.png");
+	}
+*/
 	.crypto-guide:hover {
 		background-color:#EEEEEE;
 	}
@@ -22,10 +48,10 @@
           <h2>Encrypt Your Data and Communications</h2>
           <p>
           	Check out our step-by-step guides and jump right in to crypto! See how easy it is to encrypt your files, emails, chats, and more!</p>
-          	<a href="?page=1.1"><div class="crypto-guide">Emails</div></a>
-          	<a href="?page=1.2"><div class="crypto-guide">Files and Folders</div></a>
-          	<a href="?page=1.3"><div class="crypto-guide">Instant Messages (IM)</div></a>
-        	<a href="?page=1.4"><div class="crypto-guide">Text Messages (SMS)</div></a>
+          	<a href="?page=1.1"><div id="cg-EMAIL" class="crypto-guide">Emails</div></a>
+          	<a href="?page=1.2"><div id="cg-FILES" class="crypto-guide">Files and Folders</div></a>
+          	<a href="?page=1.3"><div id="cg-IM" class="crypto-guide">Instant Messages (IM)</div></a>
+        	<a href="?page=1.4"><div id="cg-SMS" class="crypto-guide">Text Messages (SMS)</div></a>
           
           <h2>Why Crypto Matters</h2>
           <p>Not sure <strong>why</strong> you need crypto? Check out this information on the threats to your privacy that crypto can help protect against. <br />[CONTENT NEEDED]</p>
