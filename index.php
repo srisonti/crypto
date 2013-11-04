@@ -77,6 +77,7 @@ if (!$pageid || ($pageid < 0) || ($pageid > 3)){
                 <a href="?page=1.2" class="list-group-item sub-item<?php if($pageid==1.2)echo ' subactive'; if($inactive) echo ' hideme'; ?>">File and Folder Encryption</a>
                 <a href="?page=1.3" class="list-group-item sub-item<?php if($pageid==1.3)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Instant Message Encryption</a>
                 <a href="?page=1.4" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
+                <a href="?page=1.5" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
             <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active' ?>">Upcoming Events</a>
             <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active' ?>">Contribute</a>
             <!-- <a href="#" class="list-group-item">Vestibulum at eros</a> -->
@@ -105,6 +106,9 @@ if ($pageid==1){
 	}
 	if ($pageid==1.4){
 		include "content/HT-SMS.html";
+	}
+	if ($pageid==1.5){
+		include "content/HT-WEB.html";
 	}
 
 if ($pageid==2){
