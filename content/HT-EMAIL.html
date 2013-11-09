@@ -1,5 +1,26 @@
 
 <!-- BEGIN PAGE-SPECIFIC CONTENT -->
+<style>
+div.sshot-right, div.sshot-wide {
+	border: 2px solid #DDD;
+	padding: .25em;
+}
+.sshot-right {
+	width:20em;
+	float:right;
+}
+.sshot-wide {
+	width:80%;
+}
+.sshot-sm, .sshot-wd {
+	width:100%;
+}
+
+
+</style>
+
+
+
        <h1>Email Encryption with Thunderbird</h1>
           <h3><i>A guide to setting up PGP-encrypted email on Windows and OS X</i></h3>
           <p><strong>Purpose:</strong> This guide attempts to explain how to implement PGP email encryption to enhance security and privacy. This guide is a recipe, not an encyclopedia. Its primary goal is to demonstrate how it is done, not to explain why (although there is some explanation at the end). For further information, we recommend consulting the Ars Technica article on setting up email encryption. The Ars guide uses the same method described below, but we have no affiliation with Ars Technica. The article can be found <a href="http://arstechnica.com/security/2013/06/encrypted-e-mail-how-much-annoyance-will-you-tolerate-to-keep-the-nsa-away/">here at Ars Technica.</a></p>
@@ -42,14 +63,13 @@
             <li>
               Obtain the Thunderbird installation file
               <ul>
-                <li>Visit <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird's site</a> and download the latest version
-  ◦ or, install Thunderbird from the installation file on this CD</li>
+                <li>Visit <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird's site</a> and download the latest version</li>
               </ul>
             </li>
             <li>
               Install Thunderbird
               <ul>
-                <li>Double-click the installation file in your download folder or on the CD</li>
+                <li>Double-click the installation file in your download folder</li>
                 <li>OS X – Drag Thunderbird to your Applications folder</li>
                 <li>Windows – Allow the program to run and click Next until the installation program finishes. The standard options are okay.</li>
               </ul>
@@ -63,7 +83,7 @@
             </li>
             <li>
               Configure Thunderbird to use your current email account
-              <ul>
+              <ul><div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-AcctSetup.jpg"></img></div>
                 <li>
                   Thunderbird should automatically begin to setup your email account. If it does not, click “Create a new account”
                   <ul>
@@ -80,17 +100,18 @@
           <h2>Part II: Install GPGSuite or Gpg4Win (GPA) and Create Your Key Pair</h2>
 
           <h3>OS X (GPG Suite)</h3>
+          <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-GPGGen.jpg"></img></div>
           <ol>
             <li>
               Obtain the GPG Suite installation file
               <ul>
-                <li>Download the GPG Suite or <a href="https://gpgtools.org/">here</a>, install GPG Suite from the installation file on the CD</li>
+                <li>Download the GPG Suite or <a href="https://gpgtools.org/">here</a>.</li>
               </ul>
             </li>
             <li>
               Install GPG Suite
               <ul>
-                <li>Double-click GPG Suite – 2013.08.06.dmg in your download folder or on the CD</li>
+                <li>Double-click GPG Suite – 2013.08.06.dmg in your download folder</li>
                 <li>Double-click Install.pkg</li>
                 <li>Click Continue until the installation completes. The default options are okay.</li>
               </ul>
@@ -100,6 +121,7 @@
               <ul>
                 <li>Double-click GPG Keychain Access in your Applications folders</li>
                 <li>Click New to create a key pair. Enter your name and the email address you want to use with encryption. You can select from the advanced options if you would like to increase security by making your key longer or having it expire.</li>
+            	<div class="sshot-wide"><img class='sshot-wd' src="/content/screenshots/HT-EMAIL-GPGSetPass.jpg"></img></div>
                 <li>When the you see the prompt that says “Enter passphrase”, wait for a second. Read the text in the box that's probably hidden behind the passphrase box. It basically says to do some stuff on your computer like copy large files and type some things for a bit to make your key more random. (The more random it is, the harder it is to crack.)</li>
                 <li>Then, type a passphrase and press OK. You will use this passphrase to access your private key when you need to send an email or decrypt an email sent to you. It should be as long and complex as you can possibly tolerate typing on a regular basis.</li>
                 <li>Done! You now have a key pair; a Public PGP Key and a Private PGP Key. Do you know what that means? If you don't, now is a good time to go read the Appendix.</li>
@@ -113,7 +135,7 @@
             <li>
               Obtain the Gpg4Win Installation file
               <ul>
-                <li>Download the latest version <a href="http://www.gpg4win.org/">here</a> or, install Gpg4win from the installation file on the CD</li>
+                <li>Download the latest version <a href="http://www.gpg4win.org/">here</a>.</li>
               </ul>
             </li>
             <li>
@@ -143,8 +165,10 @@
           <ol>
             <li>Run Thunderbird, if it is not still open.</li>
             <li>Open “Add-Ons”, located in the “Tools” menu or in the menu launched by the button with 3 horizontal bars near the top right of Thunderbird.</li>
+            <div class="sshot-wide"><img class="sshot-wd" src="/content/screenshots/HT-EMAIL-Enig.jpg"></img></div>
             <li>Search for Enigmail using the search box on the Add-Ons page. Click install, and then restart Thunderbird to enable the add-on.</li>
             <li>WINDOWS ONLY: check Enigmail In the “Tools” menu or button, select OpenPGP >> Preferences. If you see an error message, or if the Preferences box shows “Could not find GnuPG” under “Basic Settings” and “Files and Directories”, check the box “Override with”. Then, press “Browse...”. Navigate to and select “C:\Program Files\GNU\GnuPG\gpg2.exe”. (On some systems, you may need to use “C:\Program Files (x86)\GNU\GnuPG\gpg2.exe”.)</li>
+            <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-EnigSetup.jpg"></img></div>
             <li>Configure Enigmail for your email account. Click the menu button and go to “Options” or “Preferences” and then “Account Settings”. On the left side, select OpenPGP Security. Check the box at the top of the right side to enable Enigmail. If you entered your email address when you made your private key,  the “Use email address of this identity...” option is fine. Otherwise, click the specific key option and press “Select Key”. Select the key you made and press OK.</li>
             <li>Done! You can now send and received encrypted emails.</li>
           </ol>
@@ -154,15 +178,17 @@
           <p>Basics of Keys: In order to send someone an encrypted message, you will need their public key. For example, to send a message that only John can decrypt, you must encrypt it with John's public key. John then uses his private key to decrypt the message. Never give out your private key for any reason. Whoever has your private key can decrypt any encrypted message sent to you using your paired public key. For further information on how key pairs work, now is a really good time to read the Appendix or see the suggested links on that.</p>
 
           <ol>
-            <li>Obtain a public key from someone you want to email. This CD contains the public key for the email address <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>. If you don't have anyone's public key, try that one and be sure to send me your public key so I can respond. I'll try to answer you ASAP by sending you an encrypted email back. Please do not send any sensitive information. This is for testing purposes only, and you cannot be sure that the public key on this disc was not tampered with.</li>
+            <li>Obtain a public key from someone you want to email. If you don't have anyone's public key, download <a href="/content/FE0E7924.asc"">the public key</a> for <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a> and attach your public key when you send me an email. I'll try to answer you ASAP by sending you an encrypted email back. Please do not send any sensitive information, this is for testing purposes only.</li>
             <li>
               Import the recipient's public key. 
+              <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-GPGImport.jpg"></img></div>
               <ul>
                 <li>Windows - find the key file and right click it.  Click “More GpgEX Options” and then “Import Keys”. If this option is not available or does not work, open up GPA and click Import. Find the file and select it. Click OK.</li>
                 <li>OS X – open up GPG Keychain Access and click Import. Find and select the key file, then Click Open. </li>
               </ul>
             </li>
             <li>Type a test email. Open Thunderbird and address an email to the owner of a public key you imported. Type something in the body to be encrypted. Please note that the subject line will not be encrypted.</li>
+            <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-GPGSend.jpg"></img></div>
             <li>
               Encrypt and send the message. Press the key icon in the bottom right of the Compose window, or select “Encrypt this message” under the OpenPGP menu. Press Send to send the email. You should see your message turn into what looks like garbage text right before it gets sent out. It may ask you to enter the passphrase for your private key. If so, type the passphrase you typed when you created the key pair.
               <ul>
@@ -171,11 +197,10 @@
             </li>
             <li>
               That's it, you've sent an encrypted message! If you sent it to plexiglass@riseup.net, I will send you a reply as soon as I can letting you know if it worked. If you send me your public key as a file or in the text of your email, I will send you an encrypted response.
-              <ul>
-                <li><strong>Receiving Encrypted Messages:</strong> When you receive an encrypted message, just click it. A box will pop up asking for your passphrase. Enter it and the message should now be decrypted.</li>
-              </ul>
             </li>
           </ol>
+          
+          <p><strong>Receiving Encrypted Messages:</strong> When you receive an encrypted message, just click it. A box will pop up asking for your passphrase. Enter it and the message should now be decrypted.</p>
 
 
           <h2>Appendix</h2>
