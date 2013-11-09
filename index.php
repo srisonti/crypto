@@ -4,8 +4,12 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        <!-- ALL YOUR ENCRYPTION ARE BELONG TO US -->
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
         <title>CryptoParty ATX</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -68,7 +72,7 @@ if (!$pageid || ($pageid < 0) || ($pageid > 3)){
 }
 ?>     
       
-          <div class="list-group">
+        <div class="list-group">
             <a href="?page=0" class="list-group-item<?php if($pageid==0)echo ' active' ?>">
               About CryptoParty ATX
             </a>
@@ -81,10 +85,10 @@ if (!$pageid || ($pageid < 0) || ($pageid > 3)){
             <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active' ?>">Upcoming Events</a>
             <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active' ?>">Contribute</a>
             <!-- <a href="#" class="list-group-item">Vestibulum at eros</a> -->
-          </div>
         </div>
-        <div class="col-lg-8">
-
+        <div>Follow <a href="https://twitter.com/atxcrypto">ATXCrypto on Twitter</a></div>
+    </div>
+    <div class="col-lg-8">
 
 
 <?php
@@ -120,7 +124,7 @@ if ($pageid==3){
 
 ?>
 
-<hr>
+        <hr>
           <p><img width=44 src="images/gplv3-88x31.png" />&nbsp;&nbsp;<strong>Copyleft Notice:</strong> The content on this page is covered under <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3.0</a> unless otherwise noted. The applications referenced in this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
 
           <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
