@@ -123,7 +123,7 @@ if ($pageid==3){
 <hr>
           <p><img width=44 src="images/gplv3-88x31.png" />&nbsp;&nbsp;<strong>Copyleft Notice:</strong> The content on this page is covered under <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3.0</a> unless otherwise noted. The applications referenced in this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
 
-          <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the git repo or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
+          <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
         </div>
       </div>
 
