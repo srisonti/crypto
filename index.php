@@ -67,7 +67,13 @@
 <?php
 
 $pageid = $_GET['page'];
-if (!$pageid || ($pageid < 0) || ($pageid > 3)){ 
+if (!$pageid){
+	$pageid=0;
+}
+else if($pageid>3){
+	$pageid=0;
+}
+else if($pageid<0){
 	$pageid=0;
 }
 ?>     
@@ -96,32 +102,32 @@ if (!$pageid || ($pageid < 0) || ($pageid > 3)){
 if ($pageid==0){
 	include "content/ATX.html";
 }
-if ($pageid==1){
+else if ($pageid==1){
 	include "content/how-to.html";
 }
-	if ($pageid==1.1){
+	else if ($pageid==1.1){
 		include "content/HT-EMAIL.html";
 	}
-	if ($pageid==1.2){
+	else if ($pageid==1.2){
 		include "content/HT-FILE.html";
 	}
-	if ($pageid==1.3){
+	else if ($pageid==1.3){
 		include "content/HT-OTR.html";
 	}
-	if ($pageid==1.4){
+	else if ($pageid==1.4){
 		include "content/HT-SMS.html";
 	}
-	if ($pageid==1.5){
+	else if ($pageid==1.5){
 		include "content/HT-WEB.html";
 	}
-	if ($pageid==1.6){
+	else if ($pageid==1.6){
 		include "content/HT-PASSWD.html";
 	}
 
-if ($pageid==2){
+else if ($pageid==2){
 	include "content/events.html";
 }
-if ($pageid==3){
+else if ($pageid==3){
 	include "content/contrib.html";
 }
 
