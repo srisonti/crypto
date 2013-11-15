@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Load Google Web Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
@@ -79,7 +79,7 @@ else if($pageid<0){
 ?>     
       
         <div class="list-group">
-            <a href="?page=0" class="list-group-item<?php if($pageid==0)echo ' active' ?>">
+            <a href="?page=0" class="list-group-item<?php if($pageid==0)echo ' active'; ?>">
               About CryptoParty ATX
             </a>
             <a href="?page=1" class="list-group-item<?php if($pageid >= 1 && $pageid < 2)echo ' active'; else $inactive=true; ?>">Crypto Info and How-To Guides</a>
@@ -89,8 +89,8 @@ else if($pageid<0){
                 <a href="?page=1.4" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
                 <a href="?page=1.5" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
                 <a href="?page=1.6" class="list-group-item sub-item<?php if($pageid==1.6)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Choosing Secure Passwords</a>
-            <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active' ?>">Upcoming Events</a>
-            <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active' ?>">Contribute</a>
+            <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active'; ?>">Upcoming Events</a>
+            <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active'; ?>">Contribute</a>
         </div>
         <div>Follow <a href="https://twitter.com/atxcrypto">ATXCrypto on Twitter</a></div>
     </div>
