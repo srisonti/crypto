@@ -89,6 +89,7 @@ else if($pageid<0){
                 <a href="?page=1.4" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
                 <a href="?page=1.5" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
                 <a href="?page=1.6" class="list-group-item sub-item<?php if($pageid==1.6)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Choosing Secure Passwords</a>
+                <a href="?page=1.7" class="list-group-item sub-item<?php if($pageid==1.7)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Keysigning and Keyservers</a>
             <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active'; ?>">Upcoming Events</a>
             <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active'; ?>">Contribute</a>
         </div>
@@ -122,6 +123,9 @@ else if ($pageid==1){
 	}
 	else if ($pageid==1.6){
 		include "content/HT-PASSWD.html";
+	}
+	else if ($pageid==1.7){
+		include "content/HT-KEYS.html";
 	}
 
 else if ($pageid==2){
