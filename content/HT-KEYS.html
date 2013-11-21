@@ -16,12 +16,18 @@ div.sshot-right, div.sshot-wide {
 .sshot-right {
 	width:20em;
 	float:right;
+	clear:right;
 }
 .sshot-wide {
-	width:80%;
-}
-.sshot-sm, .sshot-wd {
 	width:100%;
+	text-align:center;
+}
+.sshot-sm {
+	width:100%;
+}
+.sshot-wd {
+	width:45%;
+	margin:0 .5em 0 .5em;
 }
 </style>
 	   <div class="page-icon">&nbsp;</div>
@@ -79,11 +85,15 @@ div.sshot-right, div.sshot-wide {
           <ol>
             <li>First, you will need to obtain someone else's public key. You can do this through email, by downloading it from a keyserver, in person, or by any other method.</li>
             <li>Run <strong>GPG Keychain Access</strong> from your <strong>Applications</strong> folder.</li>
+            <div class="sshot-wide"><img class="sshot-wd" src="/content/screenshots/HT-KEYS-Import.jpg"></img><img class="sshot-wd" src="/content/screenshots/HT-KEYS-ImportSuccess.jpg"></img></div>
             <li>Click the <strong>Import</strong> button or select <strong>Import...</strong> from the <strong>File</strong> menu. Select the public key and press <strong>OK</strong> to import it.</li>
             <li>You should see a small window that says you successfully imported a key. If it says that 0 keys were imported, check to make sure the file you selected has not been altered, and that you do not already have the key in your list.</li>
             <li>Now that you have imported your contact's key, right-click it and go to <strong>Show Info</strong>. A window should pop up showing more detailed information.</li>
+            <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-KEYS-CheckPrint.jpg"></img></div>
             <li><strong>This is the most important step:</strong> In the Key Inspector window, you should see the Fingerprint item on the Key tab. You will need to verify the fingerprint by asking your contact to confirm it. For security reasons, you should not ask your contact to confirm it by email, chat, or any other unsecured communication. Anything that travels across the Internet could potentially be altered before it gets to you. You should not sign a key unless you are completely sure that it has not been altered. Because of this, the best way to verify a fingerprint is in person. You can read the fingerprint off of this screen and ask your contact to confirm it. Alternatively, if you can recognize your contact's voice, the next best alternative is to call your contact and verify the fingerprint over the phone. Remember, <strong>if the fingerprint does not <u>exactly</u> match what your contact says, you should not sign the key!</strong> Once you have checked and confirmed the fingerprint, you can close the Key Inspector window. </li>
+          	<div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-KEYS-HowSure.jpg"></img></div>
           	<li>Right-click your contact's key again, and click <strong>Sign...</strong> A window will open asking you how confident you are that the key belongs to the person named at the top of that window. If you have verified the fingerprint in person or over the phone, you can safely select "I have done very careful checking". If you used any indirect method, the highest confidence you should select is "I have done casual checking". If you have not checked the fingerprint, you shouldn't be signing the key in the first place. (Note: If you have more than one personal private key, you will need to select which of your keys to do the signing with under "Secret key for sign".)</li>
+			<div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-KEYS-EnterPass.jpg"></img></div>
 			<li>Ask yourself one more time if you are sure the key belongs to the person it says, then click <strong>Generate Signature</strong>. A window will open asking you to type the password for your private key. This is necessary because the act of signing involves performing some math based on your private key and your contact's public key in order to generate a unique result. This ensures that your signature no longer counts if the public key is altered, and that no one can sign a key while pretending to be you. Type in your password and press <strong>OK</strong>.</li>
 			<li>You have now successfully signed your contact's public key. Now that you have signed it, you should upload it to a keyserver. Otherwise, you are the only person who can see the signature. Continue to Part III to see how to use a keyserver.</li>
           </ol>
