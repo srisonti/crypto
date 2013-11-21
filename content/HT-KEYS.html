@@ -51,8 +51,7 @@ div.sshot-right, div.sshot-wide {
           <h2>Nutshell</h2>
           <p>First, we are going to explain what a keyserver is, and talk about what keysigning is.</p>
           <p>Second, we will show how to sign keys.</p>
-          <p>Third, we will show how to use a keyserver.</p>
-          <p>Finally, we approach it from the other side, showing how to look up a key on a keyserver and check its signatures.</p>
+          <p>Finally, we will show how to use a keyserver.</p>
 
 
           <h2>Part I: Intro to Keysigning and Keyservers</h2>
@@ -98,24 +97,53 @@ div.sshot-right, div.sshot-wide {
 			<li>You have now successfully signed your contact's public key. Now that you have signed it, you should upload it to a keyserver. Otherwise, you are the only person who can see the signature. Continue to Part III to see how to use a keyserver.</li>
           </ol>
 
-
-		  <h2>Please check back soon, this page is in progress...</h2>
-
           <h3>Windows (Gpg4Win with GPA)</h3>
           <ol>
-            <li>[Step 1]</li>
+            <li>Please check back soon!</li>
           </ol>
 
           <h2>Part III: How to use Keyservers</h2>
-
+          <p>Keyservers can be used in four main ways: 
+          	<ul>
+          	  <li>Obtaining a key you don't already have</li>
+          	  <li>Updating a key you do have to see the latest signatures</li>
+          	  <li>Sending a key that the keyserver does not have yet so others can find it there</li>
+          	  <li>Updating the keyserver's copy of a key, in order to publish the latest signatures</li>
+            </ul>
+          </p>
+          
+          <h3>Obtaining a Key from a Keyserver - Any Operating System</h3>
           <ol>
-            <li>[Step 1]</li>
+            <li>To obtain a key that you don't already have from a keyserver, first go to the website of a keyserver like <a href="http://keys.gnupg.net/">http://keys.gnupg.net/</a>. Please note that this website may look different every time you load it. The index is hosted by many different servers, and it may load the page from a different server to help distribute the server load. For this reason, the labels in the process below may be slightly different, but it should work basically the same on every server.</li>
+            <li>Type in the email address, name, or Key ID of the person you want to contact in the "String" or "Search String" box.</li>
+            <li>If you would like to see signatures in addition to the public keys, select the "verbose index" option.</li>
+            <li>Click the <strong>Search</strong> or <strong>Submit</strong> button.</li>
+            <li>When the Search Results page appears, review the results. If there is only one, that's probably the one you're looking for. If there is more than one, see if you can tell which one is correct by looking at the User ID or the signatures. If you know your contact, it can be easy to figure out which key is correct.
+            	<ul><li>Note: A Key ID is an even shorter version of the key's fingerprint. It's not secret information; it just provides a quick way to find public keys. So if you searched by Key ID, you should only see one result. If you did not, and you can't tell which result is correct, ask your contact for their Key ID and you should be able to find it easily if it is on the keyserver.</li></ul>
+            </li>
           </ol>
-
-          <h2>Part IV: Finding Keys and Checking Signatures</h2>
+          
+          <h3>Obtaining a Key from a Keyserver - Alternate Method (OS X)</h3>
           <ol>
-            <li>[Step 1]</li>
+          	<li>Open <strong>GPG Keychain Access</strong> in your Applications folder</li>
+          	<li>Press <strong>Command + F</strong> or select <strong>Search for key...</strong> from the <strong>Key</strong> menu at the top of the screen.</li>
+          	<li>Type in the name, email address, or Key ID of the person you want to contact and press <strong>Search key</strong>.</li>
+          	<li>Review the results as in the previous method. Check the box next to the key you want to import, then press <strong>Retrieve key</strong></li>
           </ol>
+          
+          <h3>Updating a Key from a Keyserver</h3>
+          <ul>
+          	<li><strong>OS X</strong> - To retrieve the latest version of a key from the keyserver, simply open up <strong>GPG Keychain Access</strong>, right click the key you want to update, and click <strong>Update from keyserver</strong>. That's it, you can now see all of the signatures for that key that have been sent to the keyserver!</li>
+          </ul>
+
+		  <h3>Sending a Key to a Keyserver</h3>
+          <ul>
+          	<li><strong>OS X</strong> - To send a key to the keyserver in the first place, simply open up <strong>GPG Keychain Access</strong>, right click the key you want to update, and click <strong>Send public key to keyserver</strong>. That's it, now others can search for your public key and get it from the keyserver!</li>
+          </ul>
+          
+          <h3>Updating the Keyserver's Copy</h3>
+          <p>You only need to update the keyserver's copy if you have added a signature. There is no difference between sending a key in the first place and updating it. Just follow the previous instructions for sending a key and the keyserver will be updated with the signature you added! Remember to be careful about which keys you sign.</p>
+
         
         
           
