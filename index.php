@@ -88,7 +88,7 @@ else if($pageid<0){
                 <a href="?page=1.5" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
                 <a href="?page=1.6" class="list-group-item sub-item<?php if($pageid==1.6)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Choosing Secure Passwords</a>
                 <a href="?page=1.7" class="list-group-item sub-item<?php if($pageid==1.7)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Keysigning and Keyservers</a>
-                <a href="?page=1.8" class="list-group-item sub-item<?php if($pageid==1.8)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Securely Delete Data</a>
+<!--- nothing to see here                <a href="?page=1.8" class="list-group-item sub-item<?php if($pageid==1.8)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Securely Delete Data</a> -->
             <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active'; ?>">Upcoming Events</a>
             <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active'; ?>">Contribute</a>
         </div>
