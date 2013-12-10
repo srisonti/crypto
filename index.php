@@ -82,23 +82,25 @@ else if($pageid>3){
 else if($pageid<0){
 	$pageid=0;
 }
+$os = $_GET['os'];
+if(!$os){$os="win";}
 ?>     
       
         <div class="list-group">
-            <a href="?page=0" class="list-group-item<?php if($pageid==0)echo ' active'; ?>">
+            <a href="?page=0&os=<?php echo $os; ?>" class="list-group-item<?php if($pageid==0)echo ' active'; ?>">
               About CryptoParty ATX
             </a>
-            <a href="?page=1" class="list-group-item<?php if($pageid >= 1 && $pageid < 2)echo ' active'; else $inactive=true; ?>">Crypto Info and How-To Guides</a>
-                <a href="?page=1.1" class="list-group-item sub-item<?php if($pageid==1.1)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Email Encryption</a>
-                <a href="?page=1.2" class="list-group-item sub-item<?php if($pageid==1.2)echo ' subactive'; if($inactive) echo ' hideme'; ?>">File and Folder Encryption</a>
-                <a href="?page=1.3" class="list-group-item sub-item<?php if($pageid==1.3)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Instant Message Encryption</a>
-                <a href="?page=1.4" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
-                <a href="?page=1.5" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
-                <a href="?page=1.6" class="list-group-item sub-item<?php if($pageid==1.6)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Choosing Secure Passwords</a>
-                <a href="?page=1.7" class="list-group-item sub-item<?php if($pageid==1.7)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Keysigning and Keyservers</a>
-                <a href="?page=1.8" class="list-group-item sub-item<?php if($pageid==1.8)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Securely Delete Data</a>
-            <a href="?page=2" class="list-group-item<?php if($pageid==2)echo ' active'; ?>">Upcoming Events</a>
-            <a href="?page=3" class="list-group-item<?php if($pageid==3)echo ' active'; ?>">Contribute</a>
+            <a href="?page=1&os=<?php echo $os; ?>" class="list-group-item<?php if($pageid >= 1 && $pageid < 2)echo ' active'; else $inactive=true; ?>">Crypto Info and How-To Guides</a>
+                <a href="?page=1.1&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.1)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Email Encryption</a>
+                <a href="?page=1.2&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.2)echo ' subactive'; if($inactive) echo ' hideme'; ?>">File and Folder Encryption</a>
+                <a href="?page=1.3&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.3)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Instant Message Encryption</a>
+                <a href="?page=1.4&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.4)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Text Message (SMS) Encryption</a>
+                <a href="?page=1.5&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.5)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Encrypted Web Browsing</a>
+                <a href="?page=1.6&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.6)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Choosing Secure Passwords</a>
+                <a href="?page=1.7&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.7)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Keysigning and Keyservers</a>
+                <a href="?page=1.8&os=<?php echo $os; ?>" class="list-group-item sub-item<?php if($pageid==1.8)echo ' subactive'; if($inactive) echo ' hideme'; ?>">Securely Delete Data</a>
+            <a href="?page=2&os=<?php echo $os; ?>" class="list-group-item<?php if($pageid==2)echo ' active'; ?>">Upcoming Events</a>
+            <a href="?page=3&os=<?php echo $os; ?>" class="list-group-item<?php if($pageid==3)echo ' active'; ?>">Contribute</a>
         </div>
         <div>Follow <a href="https://twitter.com/atxcrypto">ATXCrypto on Twitter</a></div>
     </div>
@@ -155,7 +157,7 @@ else if ($pageid==3){
         <hr>
           <p><img width=44 src="images/gplv3-88x31.png" />&nbsp;&nbsp;<strong>Copyleft Notice:</strong> The content on this page is covered under <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3.0</a> unless otherwise noted. The applications referenced in this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
 
-          <p>If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
+          <p><strong>Contact Us!</strong> If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
         </div>
       </div>
 
