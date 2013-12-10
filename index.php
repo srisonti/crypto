@@ -42,6 +42,14 @@
             .hideme {
             	display:none;
             }
+            .osSelect {
+            	float:right;
+            	clear:right;
+            	/*width:150px;*/
+            	background:#DDDDDD;
+            	padding:.25em;
+            	margin:.25em;
+            }
             
 
         </style>
@@ -97,7 +105,12 @@ else if($pageid<0){
     <div class="col-lg-8">
 
 
+
 <?php
+
+
+
+
 
 if ($pageid==0){
 	include "content/ATX.html";

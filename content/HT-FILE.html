@@ -25,6 +25,23 @@ div.sshot-right, div.sshot-wide {
 }
 </style>
 	   <div class="page-icon">&nbsp;</div>
+	   
+<?php
+
+$pageid = $_GET['page'];
+$os = $_GET['os'];
+if(!$os){$os="win";}
+
+if($os=="win"){
+	echo "<style>.HideOSX {display:none;}</style>";
+	echo "<a href=\"?page=$pageid&os=osx\"><div class=\"osSelect\">Select Your OS: <br /><img src=\"/images/os_button_win.png\" /></div></a>\n";
+}
+else {
+	echo "<style>.HideWin {display:none;}</style>";
+	echo "<a href=\"?page=$pageid&os=win\"><div class=\"osSelect\">Select Your OS: <br /><img src=\"/images/os_button_osx.png\" /></div></a>\n";
+}
+?>
+	   
        <h1>File and Folder Encryption with TrueCrypt</h1>
           <h3><i>A guide to encrypting, files, folders, and drives using TrueCrypt</i></h3>
           <p><strong>Purpose:</strong> This guide attempts to explain how to install and use the application TrueCrypt to create encrypted file containers to password-protect sensitive data.</p>
@@ -57,8 +74,8 @@ div.sshot-right, div.sshot-wide {
             <li>
               Install TrueCrypt
               <ul>
-                <li>OS X – Double-click <strong>TrueCrypt 7.1a.dmg</strong> in your downloads folder, then double-click <strong>TrueCrypt 7.1a.mpkg</strong> in the window that opens. Click Continue twice and then Install. Enter your password to allow the program to install.</li>
-                <li>WINDOWS – Double-click <strong>TrueCrypt Setup 7.1a.exe</strong>. Allow the program to run, choose to accept the license, and then click Next until the installation completes. You can customize the options if you wish, but the default options are okay.</li>
+                <span class="HideOSX"><li>OS X – Double-click <strong>TrueCrypt 7.1a.dmg</strong> in your downloads folder, then double-click <strong>TrueCrypt 7.1a.mpkg</strong> in the window that opens. Click Continue twice and then Install. Enter your password to allow the program to install.</li></span>
+                <span class="HideWin"><li>WINDOWS – Double-click <strong>TrueCrypt Setup 7.1a.exe</strong>. Allow the program to run, choose to accept the license, and then click Next until the installation completes. You can customize the options if you wish, but the default options are okay.</li></span>
               </ul>
             </li>
           </ol>
@@ -66,8 +83,8 @@ div.sshot-right, div.sshot-wide {
 		  <h2>Part II: Create an Encrypted File Container</h2>
           <ol>
             <li>
-              	OS X – Double-click <strong>TrueCrypt</strong> in your <strong>Applications</strong> folder.<br />
-				WINDOWS – Click Start > Programs > TrueCrypt > <strong>TrueCrypt</strong>
+              	<span class="HideOSX">OS X – Double-click <strong>TrueCrypt</strong> in your <strong>Applications</strong> folder.<br /></span>
+				<span class="HideWin">WINDOWS – Click Start > Programs > TrueCrypt > <strong>TrueCrypt</strong></span>
             </li>
             <li>
               	Click the <strong>Create Volume</strong> button in the main TrueCrypt window. (Windows TrueCrypt should be nearly identical in content and format to the OS X screenshots here, but has a different style.)
@@ -99,7 +116,6 @@ div.sshot-right, div.sshot-wide {
             <li>
             	On the Format Options screen, just click <strong>Next &gt;</strong>. For best compatibility with various operating systems, we recommend using FAT. The only notable limitation is that FAT does not allow you to have files larger than 4GB each. (Your container can still be virtually as big as you want, but no file inside it can be larger than 4GB.)
             </li>
-            <div class="sshot-wide"><img class='sshot-wd' src="/content/screenshots/HT-FILE-VolumeSize.jpg"></img></div>
             <li>
             	<strong>This is the most important step.</strong> When you get to the Volume Format screen, read the IMPORTANT paragraph near the bottom. Spend as long as you can stand randomly moving your mouse around in this window. The longer you do it, and the more random the movements are, the stronger your encryption key will be. You only have to do this once, and you never have to deal with your encryption key directly, so spend a few minutes and make it count. Once you have moved your mouse around for as long as you could stand, click <strong>Format</strong>.
             </li>
@@ -129,16 +145,18 @@ div.sshot-right, div.sshot-wide {
           	<div class="sshot-wide"><img class='sshot-wd' src="/content/screenshots/HT-FILE-VolumeOpen.jpg"></img></div>
           	<li>
           		If you typed your password correctly, the volume should appear in the slot you selected. To access the encrypted volume:<br />
-				WINDOWS: Go to <strong>My Computer</strong> and open the drive letter that you selected. <br />
-				OS X: Find the volume in the Finder under Devices, or on the Desktop
+				<span class="HideWin">WINDOWS: Go to <strong>My Computer</strong> and open the drive letter that you selected. <br /></span>
+				<span class="HideOSX">OS X: Find the volume in the Finder under Devices, or on the Desktop</span>
           	</li>
           	<li>
-          		Now, add a file to your container. Since we are just practicing, you can use any file, even the files on this CD. Simply drag the file into the container; it works like any other folder. This will copy the file, not move it, so when you use this with actual private data, you may want to delete the unencrypted original file after you have verified that the encrypted copy works.
+          		Now, add a file to your container. Since we are just practicing, you can use any file. Simply drag the file into the container; it works like any other folder. This will copy the file, not move it, so when you use this with actual private data, you may want to delete the unencrypted original file after you have verified that the encrypted copy works.
           	</li>
           	<li>
           		After you have added the file(s) and you are done using them, you will want to dismount the volume. To dismount the volume, select the drive letter or slot number in the main TrueCrypt window, and click Dismount. This makes sure that anyone who wants to access the files will need the password. If you do not dismount the volume, anyone with access to your computer can simply open up the container and view the contents. Think of mounting and dismounting as unlocking and locking, respectively. You mount (or unlock) the file container using your password so you can add files or use the files that are already there. When you're done, dismount (or lock) the container so your files are secure.<br /><br />
-          		<div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-FILE-Dismount.jpg"></img></div>	
-				<strong>OS X WARNING</strong>: <em>Never, ever, click the Eject symbol</em> next to the name of the file container volume or click Eject in the right-click menu for the volume. This can cause TrueCrypt to freeze, and could possibly result in data loss. Always use the <strong>Dismount</strong> button in the main TrueCrypt window. <em>Always</em>.
+          		<span class="HideOSX">
+          			<div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-FILE-Dismount.jpg"></img></div>	
+					<strong>OS X WARNING</strong>: <em>Never, ever, click the Eject symbol</em> next to the name of the file container volume or click Eject in the right-click menu for the volume. This can cause TrueCrypt to freeze, and could possibly result in data loss. Always use the <strong>Dismount</strong> button in the main TrueCrypt window. <em>Always</em>.
+				</span>
           	</li>
           	<li>
           		Now, let's try it out. Repeat steps 2 through 4 and see if your file is there in your encrypted container. If you see the file you added, you're done. Don't forget to <strong>Dismount</strong> your volume. Now you can use TrueCrypt to securely store any private documents or files you want. For fun, try typing your password wrong when you mount the volume so you can see what will happen. For more advanced fun, open the TrueCrypt volume file with a Hex or Text editor to view the beautiful randomness inside (but don't change anything!).
