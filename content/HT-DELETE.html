@@ -16,9 +16,11 @@ div.sshot-right, div.sshot-wide {
 .sshot-right {
 	width:20em;
 	float:right;
+	clear:right;
 }
 .sshot-wide {
 	width:80%;
+	clear:both;
 }
 .sshot-sm, .sshot-wd {
 	width:100%;
@@ -52,7 +54,7 @@ div.sshot-right, div.sshot-wide {
 			<p>Last, we will show how to use DBAN to securely erase entire drives, regardless of operating system.</p>
 
 
-<!-- <div class="sshot-wide"><img class='sshot-wd' src="/content/screenshots/HT-FILE-CreateVolume.jpg"></img></div> -->
+<!-- <div class="sshot-wide"><img class='sshot-wd' src="/content/screenshots/HT-FILE-CreateVolume.jpg" /></div> -->
           <h2>Part I: Intro to Securely Erasing Data</h2>
 		  <p>Once you delete a file it's gone forever, right? Nope! If that were true, this page wouldn't exist, and neither would <a href="http://www.ehow.com/how_5952030_recover-deleted-files.html">pages like this</a>. There are many software options available to recover deleted files, and these can be very useful when you accidentally hit that delete key. </p>
 		  <p>But sometimes, you <em>don't</em> want to be able to get a file back. If you can recover a file, then anyone with access to your computer, portable hard drive, etc could do the same thing. Some adversaries may have access to even more powerful software and hardware than you do, meaning it could be even easier for them to retrieve the files you thought were gone!</p>
@@ -76,16 +78,20 @@ div.sshot-right, div.sshot-wide {
           <h2>Part II: Securely Erase Data on OS X</h2>
           <h3>Files and Folders</h3>
           <ol>
+          	<div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-OSXDragToTrash.jpg" /></div>
 			<li>First, move the sensitive file to the Trash just like normal. Securely erasing will take more time than normal, so it's a good idea to empty your trash of normal, non-sensitive files before you add the sensitive files to the Trash.</li>
 			<li>Right click the Trash icon on your dock.</li>
+		    <div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-OSXSecureEmpty.jpg" /></div>
 			<li>Press and hold the Command key. You should see the words "Empty Trash" switch to "Secure Empty Trash".</li>
 			<li>Click <strong>Secure Empty Trash</strong> to securely erase all files in the Trash by deleting them and writing over the space seven times.</li>
           </ol>
           <h3>Free Space</h3>
           <ol>
 			<li>Open <strong>Disk Utility</strong> in the <strong>Utilities</strong> folder, located inside the <strong>Applications</strong> folder. </li>
-			<li>On the left side, select the partition you want to erase the free space on. A partition is just a part of a hard drive, and the part you want is probably called "Macintosh HD" unless you have changed the name.</li>
+			<div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-OSXFreeSpaceButton.jpg" /></div>
+			<li>On the left side, select the partition you want to erase the free space on. A partition is just a part of a hard drive, and the part you want is probably called "Macintosh HD" unless you have changed the name. (In the screenshot to the right, the name was changed to "Silver Box".)</li>
 			<li>Click the <strong>Erase</strong> tab, then click <strong>Erase Free Space...</strong></li>
+			<div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-OSXFreeSpaceOpt.jpg" /></div>
 			<li>A window will open asking you to select how to erase the free space.
 				<ul>
 				<li>The "Zero Out" option is better than nothing. It writes zeros over everything (remember computers only deal with 1s and 0s in the first place).</li>
@@ -108,11 +114,14 @@ div.sshot-right, div.sshot-wide {
           
 		  <h2>Part III: Securely Erase Data on Windows</h2>
           <h3>Files and Folders</h3>
-          <ol>
-            <li>Obtain <strong>Eraser</strong> from the site's download page. Be sure to click the "Eraser 6.0.10.2620" link under "Stable Builds", as there are misleading advertisements on the page. <strong>If it looks like a big shiny Download button, it is NOT the right one.</strong></li>
+          <ol><div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-EraserDownload.jpg" /></div>
+            <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-DELETE-EraserInstallTypical.jpg" /></div>
+			<li>Obtain <strong>Eraser</strong> from the site's download page. Be sure to click the "Eraser 6.0.10.2620" link under "Stable Builds", as there are misleading advertisements on the page. <strong>If it looks like a big shiny Download button, it is NOT the right one.</strong></li>
             <li>Save the file to your computer, then click Run in the download or double-click the "Eraser 6.0.10.2620.exe" file you saved.</li>
             <li>The installation is simple. Click <strong>Next</strong>, choose to accept the license agreement, click <strong>Typical</strong> (unless you need to install additional languages), then click <strong>Install</strong>.</li>
+            <div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-EraserContext.jpg" /></div>
             <li>To securely erase a file or folder, simply right-click it, then hover over the <strong>Eraser</strong> menu. Select either <strong>Erase</strong> or <strong>Erase on restart</strong>.<br /><strong>WARNING: If you select "Erase", the program will not ask for any confirmation. The file or folder will be deleted <u>immediately</u> and <u>permanently</u>!!!</strong> <br /> For this reason, we recommend selecting "Erase on restart", so you have the option to cancel.</li>
+            <div class="sshot-right"><img class='sshot-sm' src="/content/screenshots/HT-DELETE-EraserRunNow.jpg" /></div>
             <li>If you selected "Erase", the file is gone. You're done! If you selected "Erase on restart" the file will be deleted the next time you shut down your computer.</li>
             <li>To cancel erasing a file you selected to "Erase on restart", first run Eraser, then right-click the file on the "Erase Schedule" list. Click <strong>Delete Task</strong> to cancel it.</li>
           </ol>
