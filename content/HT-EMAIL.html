@@ -180,7 +180,7 @@ else {
                 <li>Click Start, then Programs, then Gpg4win, and run GPA. This is your key manager program.</li>
                 <li>GPA should prompt you to create a key the first time you run it, if you do not see the prompt, you can create a key by clicking the “Keys” menu, then “New Key...”, or by pressing Control + N.</li>
                 <li>Enter your name and the email address you will be using with this key. Create a backup copy later, unless you already have a safe location to store it. Storing private keys can be one use for TrueCrypt, see Appendix for more information.</li>
-                <li>Enter a password. This is what you will type whenever you want to encrypt or sign a message you are sending, or when you want to decrypt a message sent to you. You should now see your key on the list in the GPA window.</li>
+                <li>Enter a password. This is what you will type whenever you want to sign a message you are sending, or when you want to decrypt a message sent to you. You should now see your key on the list in the GPA window.</li>
                 <li>[Optional] Now that you have created this key, it is a good time to upload your public key to the keyserver. You can do this by clicking the key you created, then the “Server” menu, then “Send Keys...”. For more information on why keyservers are used, see Appendix.</li>
               </ul>
             </li>
@@ -210,8 +210,8 @@ else {
               Import the recipient's public key. 
               <div class="sshot-right"><img class="sshot-sm" src="/content/screenshots/HT-EMAIL-GPGImport.jpg"></img></div>
               <ul>
-                <span class="HideWin"><li>Windows - find the key file and right click it.  Click “More GpgEX Options” and then “Import Keys”. If this option is not available or does not work, open up GPA and click Import. Find the file and select it. Click OK.</li></span>
-                <span class="HideOSX"><li>OS X – open up GPG Keychain Access and click Import. Find and select the key file, then Click Open. </li></span>
+                <span class="HideWin"><li>Windows - Open up GPA and click the Import button. Find the file and select it, then click OK.</li></span>
+                <span class="HideOSX"><li>OS X – open up GPG Keychain Access and click Import. Find and select the key file, then click Open. </li></span>
               </ul>
             </li>
             <li>Type a test email. Open Thunderbird and address an email to the owner of a public key you imported. Type something in the body to be encrypted. Please note that the subject line will not be encrypted.</li>
