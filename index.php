@@ -14,47 +14,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!-- Load Google Web Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- Load local copy of Google Web Fonts -->
+        <link href='/css/lato.css' rel='stylesheet' type='text/css'>
 
+		<!-- Load main css -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-            .logo { 
-            	background:url("crypto-icon-wide.png");
-            	width:325px;
-            	height:44px;
-            }
-            .sub-item {
-				font-size: .9em;
-				padding-left:2em;
-            }
-            .subactive {
-            	background-color:#FF925D;
-            	padding-left:2em;
-            }
-            a.sub-item:hover {
-            	background-color:#FDCDAF;
-            }
-            .hideme {
-            	display:none;
-            }
-            .osSelect {
-            	float:right;
-            	clear:right;
-            	/*width:150px;*/
-            	background:#DDDDDD;
-            	padding:.25em;
-            	margin:.25em;
-            }
-            
-
-        </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/crypto.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -64,7 +31,7 @@
         <![endif]-->
 
     <div class="container">
-      <!-- Example row of columns -->
+
       <div class="row">
         <div class="col-lg-4">
         
@@ -72,18 +39,16 @@
 
 <?php
 
+/* Page selection - default 0 (main page) */
 $pageid = $_GET['page'];
-if (!$pageid){
+if (!$pageid || $pageid>3 || $pageid<0){
 	$pageid=0;
 }
-else if($pageid>3){
-	$pageid=0;
-}
-else if($pageid<0){
-	$pageid=0;
-}
+
+/* OS Selection - default Windows */
 $os = $_GET['os'];
 if(!$os){$os="win";}
+
 ?>     
       
         <div class="list-group">
@@ -104,15 +69,12 @@ if(!$os){$os="win";}
         </div>
         <div>Follow <a href="https://twitter.com/atxcrypto">ATXCrypto on Twitter</a></div>
     </div>
+    
+    
     <div class="col-lg-8">
 
-
-
+<!-- BEGIN page-specific content -->
 <?php
-
-
-
-
 
 if ($pageid==0){
 	include "content/ATX.html";
@@ -153,32 +115,28 @@ else if ($pageid==3){
 }
 
 ?>
-
+<!-- END page-specific content -->
+        
         <hr>
-          <p><img width=44 src="images/gplv3-88x31.png" />&nbsp;&nbsp;<strong>Copyleft Notice:</strong> The content on this page is covered under <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License version 3.0</a> unless otherwise noted. The applications referenced in this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
+        
+<!-- BEGIN copyright notice -->
+<p class="copyleft" xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+	<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/80x15.png" style="border-style: none;" alt="CC0" /></a>
+	To the extent possible under law,  <a rel="dct:publisher" href="https://cryptopartyatx.org">CryptoPartyATX.org</a> has waived all copyright and related or neighboring rights to <span property="dct:title">CryptoPartyATX.org</span>.<br />
+ 	The applications referenced on this site are open-source unless otherwise noted and can be obtained at the creators' websites, listed when used. Please consult application documentation for specific licenses. We have no affiliation with any linked site unless otherwise noted.</p>
+<!-- END copyright notice -->
 
-          <p><strong>Contact Us!</strong> If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
-        </div>
-      </div>
+
+<!-- Contact info -->
+<p><strong>Contact Us!</strong> If you find problems with this site, need help, or have improvements or suggestions, please contribute to the <a href="https://github.com/srisonti/crypto">git repo</a> or email me at <a href="mailto:plexiglass@riseup.net">plexiglass@riseup.net</a>.</p>
+
+
+
+        </div> <!-- /col-lg-8 -->
+      </div> <!-- /row -->
 
     </div> <!-- /container -->        
     
-<!-- do we even use these??? pretty sure we don't...   
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        
--->       
+      
     </body>
 </html>
